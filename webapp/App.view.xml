@@ -23,7 +23,7 @@
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell>
 						<core:Icon color="#1873B4" src="sap-icon://sap-ui5" size="20rem" class="sapUiMediumMarginBottom" width="100%"/>
-						<Title level="H2" titleStyle="H2" text="This is UI5!" width="100%" textAlign="Center"/>
+						<Title level="H2" titleStyle="H2" text="Isto é UI5!" width="100%" textAlign="Center"/>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
@@ -36,11 +36,11 @@
 
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell>
-						<Panel headerText="Are you ready?" expandable="true">
+						<Panel headerText="Você está preparado?" expandable="true">
 							<Switch change=".onChange" customTextOn="yes" customTextOff="no"/>
 							<l:HorizontalLayout id="ready" visible="false" class="sapUiSmallMargin">
-								<Text text="Ok, let's get you started!" class="sapUiTinyMarginEnd"/>
-								<Link text="Learn more" href="https://openui5.hana.ondemand.com/"/>
+								<Text text="Sim, vamos nessa!" class="sapUiTinyMarginEnd"/>
+								<Link text="Aprender Mais" href="https://openui5.hana.ondemand.com/"/>
 							</l:HorizontalLayout>
 						</Panel>
 					</l:BlockLayoutCell>
