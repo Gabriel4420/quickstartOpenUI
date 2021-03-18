@@ -1,0 +1,47 @@
+Script principal da raiz html
+
+<script 
+id="sap-ui-bootstrap" => CDN Bootstrap Stylezed Components
+src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" => Main core lib work with Jquery
+data-sap-ui-theme="sap_fiori_3" => Theme of application
+		data-sap-ui-libs="sap.m" => lib principal do SAP
+data-sap-ui-resourceroots='{"Quickstart": "./"}' => define o caminho raiz, ou seja a pasta anterior ao webapp
+data-sap-ui-onInit="module:Quickstart/index" => define o arquivo que inicia a aplicação, index no caso.
+data-sap-ui-compatVersion="edge" => habilita o funcionamento do app no navegador edge da microsoft.
+data-sap-ui-async="true"> => permite asincronismo na aplicação, trazendo melhora na performace da aplicação.
+</script>
+
+View XML 
+
+<mvc:View
+	controllerName="Quickstart.App" => controlador jquery do app
+	displayBlock="true" => definição do estilo block na pagina
+	xmlns="sap.m" => lib sap principal
+	xmlns:mvc="sap.ui.core.mvc"> => lib sap MVC -- architecture pattern
+
+controlador jquery 
+
+sap.ui.define([]); => recebe um array, dentro desse array 
+é definido as libs do sap.ui, por isso o nome sap.ui.define.
+
+(...
+    [
+    "sap/ui/core/mvc/Controller" => lib que define o arquivo como sendo um controlador jquery,
+    "sap/m/MessageToast" => lib que define o controlador de mensagem
+    ,
+
+    Função anonima que recebe a definição do controlador jquery e o proprio controlador
+    
+    (controller, messageToast) => {
+        
+        >> retorno da função interna 
+
+        return Controller.extend("Quickstart.App", {
+		onPress : function () {
+			MessageToast.show("Hello World!");
+		}
+
+	});
+    }
+] 
+ ...);
